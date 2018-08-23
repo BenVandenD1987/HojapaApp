@@ -1,0 +1,131 @@
+﻿@model PagedList.IPagedList<HojapaApplication.Models.ReservatieForm>
+@using PagedList.Mvc;
+@using HojapaApplication.Resources;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Overzicht";
+}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".AddLink").click(function () {
+            var recordToAdd = $(this).attr("data-id");
+            if (recordToAdd != '') {
+                $.post("/ReservatieKaarts/AddToCart", { "id": recordToAdd },
+                    function (data) {
+                        $('#cart-status').text(data.KaartOptelling);
+                    });
+            }
+        });
+    });
+</script>
+
+<!-- Button trigger modal -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div aria-hidden="true" class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Voeg item toe aan bestelling</strong>
+    </div>
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">@HojapaApplication.Resources.ResourceNL.Confirm</h4>
+            </div>
+            <div class="modal-body">
+                <p>Wilt u nog een reservatie toevoegen?</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Nieuw toevoegen</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "ReservatieKaarts")'">Bevestigen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br />
+<br />
+<h2>@HojapaApplication.Resources.ResourceNL.NewOrder -  Hojapa Reservatie!</h2>
+<div class="bs-docs-section">
+    <div class="row">
+        @using (Html.BeginForm("Index", "ReservatieForms", FormMethod.Get))
+        {
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">Zoeken: </span>
+                    @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                    <span class="input-group-btn">
+                        <input type="submit" class="btn btn-info btn-sm" value=@HojapaApplication.Resources.ResourceNL.Search />
+
+                    </span>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Categorie
+        </th>
+        <th>
+            @Html.ActionLink("Reservatie Item", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            Datum
+        </th>
+        <th>
+            @Html.ActionLink("Prijs", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
+   </th>
+             </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categorie.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservatieFormName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prijs)
+            </td>
+            <td>
+                <a href="#" class="AddLink"
+                   data-id="@item.ID" data-toggle="modal" data-target="#myModal">
+                   Toevoegen
+                </a>
+                
+                <!--<@Html.ActionLink("Toevoegen", "AddToCart", "ReservatieKaart", new { id = item.ID }, new { htmlAttributes = new { @data_toggle = "modal", @data_target = "#myModal" } })--> |
+                
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+                
+                   <!-- @Html.ActionLink("Edit", "Edit", new { id = item.ID })-->
+
+                   <!-- @Html.ActionLink("Delete", "Delete", new { id = item.ID })-->
+               
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Pagina @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+

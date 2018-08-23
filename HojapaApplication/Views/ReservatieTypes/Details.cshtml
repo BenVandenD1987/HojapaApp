@@ -1,0 +1,97 @@
+﻿@model HojapaApplication.Models.ReservatieForm
+@{
+    ViewBag.Title = "Details";
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".AddLink").click(function () {
+
+            var recordToAdd = $(this).attr("data-id");
+            if (recordToAdd != '') {
+
+                $.post("/ReservatieKaart/AddToCart", { "id": recordToAdd },
+                    function (data) {
+                        $('#cart-status').text(data.KaartOptelling);
+                    });
+            }
+        });
+    });
+</script>
+<!-- Button trigger modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div aria-hidden="true" class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>@HojapaApplication.Resources.ResourceNL.ItemAddedToCart</strong>
+    </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">@HojapaApplication.Resources.ResourceNL.Confirm.</h4>
+            </div>
+            <div class="modal-body">
+                <p>@HojapaApplication.Resources.ResourceNL.KeepShoppingOrNot</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@HojapaApplication.Resources.ResourceNL.ContinueButton</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "ReservatieKaart")'">@HojapaApplication.Resources.ResourceNL.CheckOutButton</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2>Details</h2>
+<div>
+    <h4>Item</h4>
+    <hr />
+   <!-- <dl class="dl-horizontal">
+        <img src="Url.Action("RenderImage","ReservatieForms", new { id = Model.ID})" />
+    </dl>-->
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorie.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categorie.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservatieFormName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReservatieFormName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prijs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prijs)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a href="#" class="AddLink"
+       data-id="@Model.ID" data-toggle="modal" data-target="#myModal">
+        Add
+        to cart
+    </a>
+    <!--if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+
+    }
+-->
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+

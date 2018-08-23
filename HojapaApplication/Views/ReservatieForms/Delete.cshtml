@@ -1,0 +1,55 @@
+﻿@model HojapaApplication.Models.ReservatieForm
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Bent u zeker dat u dit wilt verwijderen?</h3>
+<div>
+    <h4>Reservatie Formulier Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categorie.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categorie.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productie.ProductieNaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productie.ProductieNaam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prijs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prijs)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Verwijderen" class="btn btn-default" /> |
+            @Html.ActionLink("Terug naar lijst", "Index")
+        </div>
+    }
+</div>

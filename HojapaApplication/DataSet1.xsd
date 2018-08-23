@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Reservaties" msprop:Generator_TableClassName="ReservatiesDataTable" msprop:Generator_TableVarName="tableReservaties" msprop:Generator_TablePropName="Reservaties" msprop:Generator_RowDeletingName="ReservatiesRowDeleting" msprop:Generator_RowChangingName="ReservatiesRowChanging" msprop:Generator_RowEvHandlerName="ReservatiesRowChangeEventHandler" msprop:Generator_RowDeletedName="ReservatiesRowDeleted" msprop:Generator_UserTableName="Reservaties" msprop:Generator_RowChangedName="ReservatiesRowChanged" msprop:Generator_RowEvArgName="ReservatiesRowChangeEvent" msprop:Generator_RowClassName="ReservatiesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReservatieId" msprop:Generator_ColumnVarNameInTable="columnReservatieId" msprop:Generator_ColumnPropNameInRow="ReservatieId" msprop:Generator_ColumnPropNameInTable="ReservatieIdColumn" msprop:Generator_UserColumnName="ReservatieId" type="xs:int" minOccurs="0" />
+              <xs:element name="ReservatieDatum" msprop:Generator_ColumnVarNameInTable="columnReservatieDatum" msprop:Generator_ColumnPropNameInRow="ReservatieDatum" msprop:Generator_ColumnPropNameInTable="ReservatieDatumColumn" msprop:Generator_UserColumnName="ReservatieDatum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Gebruikersnaam" msprop:Generator_ColumnVarNameInTable="columnGebruikersnaam" msprop:Generator_ColumnPropNameInRow="Gebruikersnaam" msprop:Generator_ColumnPropNameInTable="GebruikersnaamColumn" msprop:Generator_UserColumnName="Gebruikersnaam" type="xs:string" minOccurs="0" />
+              <xs:element name="Voornaam" msprop:Generator_ColumnVarNameInTable="columnVoornaam" msprop:Generator_ColumnPropNameInRow="Voornaam" msprop:Generator_ColumnPropNameInTable="VoornaamColumn" msprop:Generator_UserColumnName="Voornaam" type="xs:string" minOccurs="0" />
+              <xs:element name="Achternaam" msprop:Generator_ColumnVarNameInTable="columnAchternaam" msprop:Generator_ColumnPropNameInRow="Achternaam" msprop:Generator_ColumnPropNameInTable="AchternaamColumn" msprop:Generator_UserColumnName="Achternaam" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Totaal" msprop:Generator_ColumnVarNameInTable="columnTotaal" msprop:Generator_ColumnPropNameInRow="Totaal" msprop:Generator_ColumnPropNameInTable="TotaalColumn" msprop:Generator_UserColumnName="Totaal" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReservatieDetails" msprop:Generator_TableClassName="ReservatieDetailsDataTable" msprop:Generator_TableVarName="tableReservatieDetails" msprop:Generator_TablePropName="ReservatieDetails" msprop:Generator_RowDeletingName="ReservatieDetailsRowDeleting" msprop:Generator_RowChangingName="ReservatieDetailsRowChanging" msprop:Generator_RowEvHandlerName="ReservatieDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="ReservatieDetailsRowDeleted" msprop:Generator_UserTableName="ReservatieDetails" msprop:Generator_RowChangedName="ReservatieDetailsRowChanged" msprop:Generator_RowEvArgName="ReservatieDetailsRowChangeEvent" msprop:Generator_RowClassName="ReservatieDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReservatieDetailsId" msprop:Generator_ColumnVarNameInTable="columnReservatieDetailsId" msprop:Generator_ColumnPropNameInRow="ReservatieDetailsId" msprop:Generator_ColumnPropNameInTable="ReservatieDetailsIdColumn" msprop:Generator_UserColumnName="ReservatieDetailsId" type="xs:int" minOccurs="0" />
+              <xs:element name="ReservatieId" msprop:Generator_ColumnVarNameInTable="columnReservatieId" msprop:Generator_ColumnPropNameInRow="ReservatieId" msprop:Generator_ColumnPropNameInTable="ReservatieIdColumn" msprop:Generator_UserColumnName="ReservatieId" type="xs:int" minOccurs="0" />
+              <xs:element name="ReservatieFormId" msprop:Generator_ColumnVarNameInTable="columnReservatieFormId" msprop:Generator_ColumnPropNameInRow="ReservatieFormId" msprop:Generator_ColumnPropNameInTable="ReservatieFormIdColumn" msprop:Generator_UserColumnName="ReservatieFormId" type="xs:int" minOccurs="0" />
+              <xs:element name="Hoeveelheid" msprop:Generator_ColumnVarNameInTable="columnHoeveelheid" msprop:Generator_ColumnPropNameInRow="Hoeveelheid" msprop:Generator_ColumnPropNameInTable="HoeveelheidColumn" msprop:Generator_UserColumnName="Hoeveelheid" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitPrijs" msprop:Generator_ColumnVarNameInTable="columnUnitPrijs" msprop:Generator_ColumnPropNameInRow="UnitPrijs" msprop:Generator_ColumnPropNameInTable="UnitPrijsColumn" msprop:Generator_UserColumnName="UnitPrijs" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReservatieForms" msprop:Generator_TableClassName="ReservatieFormsDataTable" msprop:Generator_TableVarName="tableReservatieForms" msprop:Generator_TablePropName="ReservatieForms" msprop:Generator_RowDeletingName="ReservatieFormsRowDeleting" msprop:Generator_RowChangingName="ReservatieFormsRowChanging" msprop:Generator_RowEvHandlerName="ReservatieFormsRowChangeEventHandler" msprop:Generator_RowDeletedName="ReservatieFormsRowDeleted" msprop:Generator_UserTableName="ReservatieForms" msprop:Generator_RowChangedName="ReservatieFormsRowChanged" msprop:Generator_RowEvArgName="ReservatieFormsRowChangeEvent" msprop:Generator_RowClassName="ReservatieFormsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="CategorieId" msprop:Generator_ColumnVarNameInTable="columnCategorieId" msprop:Generator_ColumnPropNameInRow="CategorieId" msprop:Generator_ColumnPropNameInTable="CategorieIdColumn" msprop:Generator_UserColumnName="CategorieId" type="xs:int" minOccurs="0" />
+              <xs:element name="ReservatieFormName" msprop:Generator_ColumnVarNameInTable="columnReservatieFormName" msprop:Generator_ColumnPropNameInRow="ReservatieFormName" msprop:Generator_ColumnPropNameInTable="ReservatieFormNameColumn" msprop:Generator_UserColumnName="ReservatieFormName" type="xs:string" minOccurs="0" />
+              <xs:element name="Datum" msdata:DateTimeMode="Local" msprop:Generator_ColumnVarNameInTable="columnDatum" msprop:Generator_ColumnPropNameInRow="Datum" msprop:Generator_ColumnPropNameInTable="DatumColumn" msprop:Generator_UserColumnName="Datum" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Prijs" msprop:Generator_ColumnVarNameInTable="columnPrijs" msprop:Generator_ColumnPropNameInRow="Prijs" msprop:Generator_ColumnPropNameInTable="PrijsColumn" msprop:Generator_UserColumnName="Prijs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Productie_Id" msprop:Generator_ColumnVarNameInTable="columnProductie_Id" msprop:Generator_ColumnPropNameInRow="Productie_Id" msprop:Generator_ColumnPropNameInTable="Productie_IdColumn" msprop:Generator_UserColumnName="Productie_Id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+   <!-- <ul class="nav navbar-nav navbar-right">-->
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-link">
+                <p>&copy; @DateTime.Now - http://www.hojapa.be - info@hojapa.be - @Html.ActionLink("Aangemeld als " + User.Identity.GetUserName() + "", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) - <a href="javascript:document.getElementById('logoutForm').submit()">Afmelden</a>
+                </p>
+                </li>
+                 </ul>
+                    }
+                }
+                else
+                {
+                    <ul class="nav navbar-nav ml-auto">
+                        <li>
+                            <p>&copy; @DateTime.Now - http://www.hojapa.be - info@hojapa.be - @Html.ActionLink("Aanmelden", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</p>
+
+                        </li>
+</ul>
+                            }
+

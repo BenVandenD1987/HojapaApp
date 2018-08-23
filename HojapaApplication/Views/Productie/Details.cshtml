@@ -1,0 +1,66 @@
+﻿@model HojapaApplication.Models.Productie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductieModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductieNaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductieNaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Auteur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Auteur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Regisseur)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regisseur)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AantalToeschouwers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AantalToeschouwers)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LedenDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LedenDescription)
+        </dd>
+
+
+    </dl>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

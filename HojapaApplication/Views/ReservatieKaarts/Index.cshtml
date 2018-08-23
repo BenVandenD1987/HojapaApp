@@ -1,0 +1,109 @@
+﻿@model HojapaApplication.ViewModel.ReservatieKaartViewModel
+    @{
+        ViewBag.Title = "Reservatie Overzicht";
+    }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".RemoveLink").click(function () {
+                var recordToDelete = $(this).attr("data-id");
+                if (recordToDelete != '') {
+                    $.post("/ReservatieKaarts/RemoveFromCart", { "id": recordToDelete },
+                        function (data) {
+                            if (data.ReservatieFormTelling == 0) {
+                                $('#row-' + data.DeleteId).fadeOut('slow');
+                            } else {
+                                $('#item-count-' + data.DeleteId).text(data.ReservatieFormTelling);
+                            }
+                            $('#cart-total').text(data.KaartTotaal);
+                            $('#update-message').text(data.Bericht);
+                            $('#cart-status').text(data.KaartOptelling);
+                        });
+                }
+            });
+        });
+    </script>
+    <h3>
+        <br />
+        <em></em>
+        <br />
+    </h3>
+    @{
+
+        if (Model.KaartItem.Count > 0)
+        {
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Reservatie Overzicht</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="update-message">
+                    </div>
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Reservatie Item
+                                </th>
+                                <th>
+                                    Datum
+                                </th>
+                                <th>
+                                    Prijs
+                                </th>
+                                <th>
+                                    Hoeveelheid
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model.KaartItem)
+                        {
+                            <tr id="row-@item.ReservatieFormId">
+                                <td>
+                                   @Html.ActionLink(item.ReservatieForms.ReservatieFormName, "Details", "ReservatieTypes", new { id = item.ReservatieForms.ID }, null)
+
+                                </td>
+                                <td>
+                                    @item.ReservatieForms.Datum.ToShortDateString()
+                                </td>
+                                <td>
+                                    @item.ReservatieForms.Prijs
+                                </td>
+                                <td id="item-count-@item.ReservatieFormId">
+                                    @item.Optellen
+                                </td>
+                                <td>
+                                    <a href="#" class="RemoveLink"
+                                       data-id="@item.ReservatieFormId" data-toggle="modal" data-target="#myModal">
+                                        Verwijder
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                        <tr class="info">
+                            <td>
+                                Totaal
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td id="cart-total">
+                                @Model.KaartTotaal
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn btn-success btn-sm" onclick="location.href='@Url.Action("Bevestiging", "Bestellen")'">
+                        Bevestigen &raquo;
+                    </button>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div>
+                <p>
+                    Reservatiekaart is leeg!
+                </p>
+            </div>
+        }
+    }

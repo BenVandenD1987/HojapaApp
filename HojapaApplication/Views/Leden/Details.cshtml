@@ -1,0 +1,147 @@
+﻿@model HojapaApplication.Models.Leden
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+
+    <div class="card border-primary mb-3" style="max-width: 100%;">
+        <div class="card-header">Details</div>
+        <div class="card-body">
+            <h4 class="card-title">@Html.DisplayFor(model => model.Naam)</h4>
+            <p class="card-text">
+                <dl class="dl-horizontal">
+                    @if (Model.Files.Any(f => f.FileType == FileType.Avatar))
+                    {
+                        <dt>
+                            Afbeelding
+                        </dt>
+                        <dd>
+                            <img src="~/File?id=@Model.Files.First(f => f.FileType == FileType.Avatar).FileId" alt="avatar" height="200" width="150"/>
+                        </dd>
+                    }
+                    <dt>
+                        @Html.DisplayNameFor(model => model.SoortLid)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.SoortLid)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Naam)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Naam)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Voornaam)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Voornaam)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Geslacht)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Geslacht)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Geboortedatum)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Geboortedatum)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Adres)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Adres)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Postcode)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Postcode)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Gemeente)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Gemeente)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Nummer)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Nummer)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.BusNummer)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.BusNummer)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Telefoon)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Telefoon)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Gsm)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Gsm)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Website)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Website)
+                    </dd>
+
+                </dl>
+            </p>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

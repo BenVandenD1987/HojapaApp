@@ -1,0 +1,138 @@
+﻿@model IEnumerable<HojapaApplication.Models.Leden>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "Leden", FormMethod.Get))
+{
+        <table style="width:100%" border="0">
+            <tr>
+                <th>
+                    @Html.Label("Zoeken: ")   @Html.TextBox("Search_Data", ViewBag.FilterValue as string)
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Zoeken</button>
+                </th>
+                <th>
+                    @Html.Label("Filter: ")   @Html.DropDownList("SoortLid", new SelectList(ViewBag.SoortLid))
+                    <input type="submit" value="Zoeken" />
+                </th>
+                <th>
+                    @Html.ActionLink("Verwijder filter", "Index", "Leden",
+                 new { ViewBag.AllData }, null)
+                </th>
+
+            </tr>
+        </table>
+}
+        <table class="table">
+       
+
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoortLid)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Naam)
+
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Voornaam)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Geslacht)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Geboortedatum)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Adres)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Postcode)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gemeente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nummer)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BusNummer)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefoon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gsm)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Website)
+                    </th>
+                    <th></th>
+                </tr>
+
+        
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoortLid)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Naam)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Voornaam)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Geslacht)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Geboortedatum)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Adres)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Postcode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gemeente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nummer)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BusNummer)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefoon)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gsm)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Website)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+
+
+                }
+    
+        </table>
+
+@using (Html.BeginForm("Export", "Leden", FormMethod.Post))
+{
+    <input type="submit" value="Opslaan Excel" />
+}

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<HojapaApplication.Models.Categorie>
+@{
+    ViewBag.Title = "ReservatieType";
+}
+<h3>Browse Genres</h3>
+<p>
+    Select from @Model.Count() genres:
+</p>
+<ul>
+    @foreach (var Categorie in Model)
+    {
+
+        <li>@Html.ActionLink(Categorie.Name, "Browse", new { Categorie = Categorie.Name })</li>
+    }
+</ul>
+

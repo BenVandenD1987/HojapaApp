@@ -1,0 +1,16 @@
+﻿@model int
+@{
+    ViewBag.Title = "Bestellen Complete";
+}
+<h2>Reservatie is voltooid!</h2>
+<!--<p>Bedankt voor uw reservatie: @Model</p>-->
+<p>Bedankt voor uw reservatie!</p>
+<br />
+
+@Html.ActionLink("Download hier uw reservatie", "Reports", new { ReportType = "PDF", reportId = @Model }, null)
+<br />
+<p>
+    Wij hebben uw reservatie goed ontvangen!
+
+</p>
+

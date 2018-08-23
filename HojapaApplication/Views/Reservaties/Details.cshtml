@@ -1,0 +1,77 @@
+﻿@model HojapaApplication.Models.Reservatie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservatie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Voornaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voornaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Achternaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Achternaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Totaal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Totaal)
+        </dd>
+
+
+    </dl>
+</div>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            Reservatie Item
+        </th>
+        <th>
+            Datum
+        </th>
+        <th>
+            Hoeveelheid
+        </th>
+    </tr>
+    @foreach (var item in Model.ReservatieDetails)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservatieForms.ReservatieFormName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservatieForms.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hoeveelheid)
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservatieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
