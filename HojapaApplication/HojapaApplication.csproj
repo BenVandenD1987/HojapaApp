@@ -631,9 +631,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201805271439031_InitialCreate.cs" />
-    <Compile Include="Migrations\201805271439031_InitialCreate.Designer.cs">
-      <DependentUpon>201805271439031_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201808251418141_InitialCreate.cs" />
+    <Compile Include="Migrations\201808251418141_InitialCreate.Designer.cs">
+      <DependentUpon>201808251418141_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -714,7 +714,7 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
-    <Content Include="favicon.ico" />
+    <None Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -727,7 +727,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -737,18 +736,16 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
     <Content Include="apiapp.json" />
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
+    <Content Include="DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
+    </Content>
     <Content Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="NLog.xsd" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Hojapa.pubxml" />
     <None Include="Properties\PublishProfiles\Hojapa1.pubxml" />
     <None Include="Properties\PublishProfiles\hojapa2.pubxml" />
@@ -781,9 +778,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -845,7 +840,7 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Bestellen\Bevestiging.cshtml" />
     <Content Include="Views\Bestellen\Complete.cshtml" />
-    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <CodeAnalysisDictionary Include="Views\RolesAdmin\Create.cshtml" />
     <Content Include="Views\RolesAdmin\Delete.cshtml" />
     <Content Include="Views\RolesAdmin\Details.cshtml" />
     <Content Include="Views\RolesAdmin\Edit.cshtml" />
@@ -889,18 +884,13 @@
     <Folder Include="Views\File\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <None Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805271439031_InitialCreate.resx">
-      <DependentUpon>201805271439031_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Report1.rdlc">
+    <Content Include="Reports\Report1.rdlc">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </Content>
     <EmbeddedResource Include="Resources\ResourceNL.resx">
       <SubType>Designer</SubType>
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -916,6 +906,11 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808251418141_InitialCreate.resx">
+      <DependentUpon>201808251418141_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

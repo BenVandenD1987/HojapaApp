@@ -24,10 +24,13 @@
                       var manager = new UserManager<ApplicationUser>(new Microsoft.AspNet.Identity.EntityFramework.UserStore<ApplicationUser>(new ApplicationDbContext()));
                       var user = manager.FindById(User.Identity.GetUserId());
                       <!--if (user != null && manager.IsInRole(user.Id, "Admin") || manager.IsInRole(user.Id, "Bestuur"))-->
-                      {
+                                  {
+                                      
+                  
 
 
-                                              <li class="nav-item dropdown">
+
+                                <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Reservaties <span class="caret"></span></a>
                                 <div class="dropdown-menu" aria-labelledby="themes">
                                     <a class="dropdown-item" href="/Reservaties/Index">Inkomende Reservaties</a>
@@ -35,11 +38,11 @@
                                     <a class="dropdown-item" href="/ReservatieForms/Index">Nieuw Formulier</a>
                                     <a class="dropdown-item" href="/ReservatieForms/Create">Nieuw Formulier item</a>
                                     <!--if (user != null && manager.IsInRole(user.Id, "Admin"))-->
-                                    {
+                                    <!--{-->
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="/RolesAdmin/Index">Gebruiker Types</a>
                                     <a class="dropdown-item" href="/UsersAdmin/Index">Gebruiker Accounts</a>
-                                    }
+                                    <!--}-->
                                 </div>
                                     
                             </li>

@@ -13,7 +13,7 @@ namespace HojapaApplication.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201805271439031_InitialCreate"; }
+            get { return "201808251418141_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
