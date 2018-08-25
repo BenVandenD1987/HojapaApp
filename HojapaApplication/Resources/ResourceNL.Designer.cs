@@ -61,6 +61,15 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Over ons.
+        /// </summary>
+        public static string AboutUs {
+            get {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adres.
         /// </summary>
         public static string Address {
@@ -70,11 +79,92 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adres en betaling gegevens.
+        /// </summary>
+        public static string AddressAndPayment {
+            get {
+                return ResourceManager.GetString("AddressAndPayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adres is verplicht!.
+        /// </summary>
+        public static string AddressIsRequired {
+            get {
+                return ResourceManager.GetString("AddressIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toevoegen.
+        /// </summary>
+        public static string AddToCart {
+            get {
+                return ResourceManager.GetString("AddToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uit veiligheidsredenen worden uw bankgegevens niet opgeslagen in ons systeem.
+        /// </summary>
+        public static string CardInfoNotStored {
+            get {
+                return ResourceManager.GetString("CardInfoNotStored", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reservaties.
+        /// </summary>
+        public static string Cart {
+            get {
+                return ResourceManager.GetString("Cart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Om te bevestigen .
+        /// </summary>
+        public static string CheckOut {
+            get {
+                return ResourceManager.GetString("CheckOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bestelling af ronden.
+        /// </summary>
+        public static string CheckOutButton {
+            get {
+                return ResourceManager.GetString("CheckOutButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bevestiging bestelling.
+        /// </summary>
+        public static string CheckoutComplete {
+            get {
+                return ResourceManager.GetString("CheckoutComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gemeente.
         /// </summary>
         public static string City {
             get {
                 return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stad is verplicht!.
+        /// </summary>
+        public static string CityIsRequired {
+            get {
+                return ResourceManager.GetString("CityIsRequired", resourceCulture);
             }
         }
         
@@ -93,6 +183,33 @@ namespace HojapaApplication.Resources {
         public static string Confirm {
             get {
                 return ResourceManager.GetString("Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bevestig Paswoord.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to U kan nu verder gaan met uw bestelling....
+        /// </summary>
+        public static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verder kiezen.
+        /// </summary>
+        public static string ContinueButton {
+            get {
+                return ResourceManager.GetString("ContinueButton", resourceCulture);
             }
         }
         
@@ -133,11 +250,56 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-mail.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email is verplicht!.
         /// </summary>
-        public static string EmailIsVerplicht {
+        public static string EmailIsRequired {
             get {
-                return ResourceManager.GetString("EmailIsVerplicht", resourceCulture);
+                return ResourceManager.GetString("EmailIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to U heeft nog geen reservatie gemaakt..
+        /// </summary>
+        public static string EmptyCart {
+            get {
+                return ResourceManager.GetString("EmptyCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vervaldatum.
+        /// </summary>
+        public static string ExpDate {
+            get {
+                return ResourceManager.GetString("ExpDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vervaldatum is verplicht.
+        /// </summary>
+        public static string ExpDateIsRequired {
+            get {
+                return ResourceManager.GetString("ExpDateIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vind.
+        /// </summary>
+        public static string Find {
+            get {
+                return ResourceManager.GetString("Find", resourceCulture);
             }
         }
         
@@ -169,6 +331,78 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Een reservatie is toegevoegd..
+        /// </summary>
+        public static string ItemAddedToCart {
+            get {
+                return ResourceManager.GetString("ItemAddedToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item Naam.
+        /// </summary>
+        public static string ItemName {
+            get {
+                return ResourceManager.GetString("ItemName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wenst u verder te kiezen of uw bestelling af te ronden?.
+        /// </summary>
+        public static string KeepShoppingOrNot {
+            get {
+                return ResourceManager.GetString("KeepShoppingOrNot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Achternaam.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Achternaam is verplicht!.
+        /// </summary>
+        public static string LastNameIsRequired {
+            get {
+                return ResourceManager.GetString("LastNameIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu.
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menukaart.
+        /// </summary>
+        public static string MenuKaart {
+            get {
+                return ResourceManager.GetString("MenuKaart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wenst u een nieuwe bestelling te plaatsen in onze .
+        /// </summary>
+        public static string MoreShoppingOrNot {
+            get {
+                return ResourceManager.GetString("MoreShoppingOrNot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nieuwe Bestelling.
         /// </summary>
         public static string NewOrder {
@@ -183,6 +417,24 @@ namespace HojapaApplication.Resources {
         public static string Orders {
             get {
                 return ResourceManager.GetString("Orders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Totaal Bestellingen.
+        /// </summary>
+        public static string OrdersTotal {
+            get {
+                return ResourceManager.GetString("OrdersTotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pagina.
+        /// </summary>
+        public static string Page {
+            get {
+                return ResourceManager.GetString("Page", resourceCulture);
             }
         }
         
@@ -205,11 +457,47 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Telefoonnr. is verplicht!.
+        /// </summary>
+        public static string PhoneIsRequired {
+            get {
+                return ResourceManager.GetString("PhoneIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Afbeelding.
         /// </summary>
         public static string Picture {
             get {
                 return ResourceManager.GetString("Picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postcode.
+        /// </summary>
+        public static string PostalCode {
+            get {
+                return ResourceManager.GetString("PostalCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postcode is verplicht!.
+        /// </summary>
+        public static string PostalCodeIsRequired {
+            get {
+                return ResourceManager.GetString("PostalCodeIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PostCode.
+        /// </summary>
+        public static string PostCode {
+            get {
+                return ResourceManager.GetString("PostCode", resourceCulture);
             }
         }
         
@@ -241,6 +529,51 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Registreer als nieuwe gebruiker?.
+        /// </summary>
+        public static string RegisterNewUser {
+            get {
+                return ResourceManager.GetString("RegisterNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to U bent succesvol geregistreerd..
+        /// </summary>
+        public static string RegisterSucces {
+            get {
+                return ResourceManager.GetString("RegisterSucces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Onthoud mijn gegevens.
+        /// </summary>
+        public static string RememberData {
+            get {
+                return ResourceManager.GetString("RememberData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uw reservatie:.
+        /// </summary>
+        public static string ReviewCart {
+            get {
+                return ResourceManager.GetString("ReviewCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mijn gegevens onthouden.
+        /// </summary>
+        public static string SafeInfo {
+            get {
+                return ResourceManager.GetString("SafeInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Zoek.
         /// </summary>
         public static string Search {
@@ -250,11 +583,65 @@ namespace HojapaApplication.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Verzendingsinformatie.
+        /// </summary>
+        public static string ShippingInformation {
+            get {
+                return ResourceManager.GetString("ShippingInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Categorieën.
+        /// </summary>
+        public static string Shop {
+            get {
+                return ResourceManager.GetString("Shop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stad.
+        /// </summary>
+        public static string State {
+            get {
+                return ResourceManager.GetString("State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Provincie is verplicht!.
         /// </summary>
         public static string StateIsRequired {
             get {
                 return ResourceManager.GetString("StateIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bevestig bestelling.
+        /// </summary>
+        public static string SubmitOrder {
+            get {
+                return ResourceManager.GetString("SubmitOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bedankt voor uw bestelling. Uw bestellingnr is .
+        /// </summary>
+        public static string ThankForTheOrder {
+            get {
+                return ResourceManager.GetString("ThankForTheOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gebruik uw account gegevens voor in te loggen....
+        /// </summary>
+        public static string UseYourAccountToLogIn {
+            get {
+                return ResourceManager.GetString("UseYourAccountToLogIn", resourceCulture);
             }
         }
     }

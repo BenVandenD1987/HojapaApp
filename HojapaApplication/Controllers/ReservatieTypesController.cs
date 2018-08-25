@@ -37,6 +37,7 @@ namespace HojapaApplication.Controllers
 
 
         // GET: /Store/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int id)
         {
             var item = storeDB.ReservatieForms.Find(id);

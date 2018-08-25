@@ -74,8 +74,8 @@ namespace HojapaApplication.Controllers
 
             var results = new ReservatieKaartRemoveViewModel
             {
-                Bericht = "One (1) " + Server.HtmlEncode(itemName) +
-                    " has been removed from your shopping cart.",
+                Bericht = "Een  " + Server.HtmlEncode(itemName) +
+                    " is verwijderd.",
                 KaartTotaal = cart.GetTotal(),
                 KaartOptelling = cart.GetCount(),
                 ReservatieFormTelling = itemCount,

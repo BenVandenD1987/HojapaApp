@@ -117,17 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Over ons</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Adres</value>
   </data>
+  <data name="AddressAndPayment" xml:space="preserve">
+    <value>Adres en betaling gegevens</value>
+  </data>
+  <data name="AddressIsRequired" xml:space="preserve">
+    <value>Adres is verplicht!</value>
+  </data>
+  <data name="CardInfoNotStored" xml:space="preserve">
+    <value>Uit veiligheidsredenen worden uw bankgegevens niet opgeslagen in ons systeem</value>
+  </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Reservaties</value>
+  </data>
+  <data name="CheckOut" xml:space="preserve">
+    <value>Om te bevestigen </value>
+  </data>
+  <data name="CheckOutButton" xml:space="preserve">
+    <value>Bestelling af ronden</value>
+  </data>
+  <data name="CheckoutComplete" xml:space="preserve">
+    <value>Bevestiging bestelling</value>
+  </data>
   <data name="City" xml:space="preserve">
     <value>Gemeente</value>
+  </data>
+  <data name="CityIsRequired" xml:space="preserve">
+    <value>Stad is verplicht!</value>
   </data>
   <data name="ClickHere" xml:space="preserve">
     <value>klik hier</value>
   </data>
   <data name="Confirm" xml:space="preserve">
     <value>Bevestig</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Bevestig Paswoord</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>U kan nu verder gaan met uw bestelling...</value>
+  </data>
+  <data name="ContinueButton" xml:space="preserve">
+    <value>Verder kiezen</value>
   </data>
   <data name="Country" xml:space="preserve">
     <value>Land</value>
@@ -141,6 +177,24 @@
   <data name="CreateAccount" xml:space="preserve">
     <value>Creëer een nieuwe account</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailIsRequired" xml:space="preserve">
+    <value>Email is verplicht!</value>
+  </data>
+  <data name="EmptyCart" xml:space="preserve">
+    <value>U heeft nog geen reservatie gemaakt.</value>
+  </data>
+  <data name="ExpDate" xml:space="preserve">
+    <value>Vervaldatum</value>
+  </data>
+  <data name="ExpDateIsRequired" xml:space="preserve">
+    <value>Vervaldatum is verplicht</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Vind</value>
+  </data>
   <data name="FirstName" xml:space="preserve">
     <value>Voornaam</value>
   </data>
@@ -150,11 +204,38 @@
   <data name="ForgotPassword" xml:space="preserve">
     <value>Paswoord vergeten?</value>
   </data>
+  <data name="ItemAddedToCart" xml:space="preserve">
+    <value>Een reservatie is toegevoegd.</value>
+  </data>
+  <data name="ItemName" xml:space="preserve">
+    <value>Item Naam</value>
+  </data>
+  <data name="KeepShoppingOrNot" xml:space="preserve">
+    <value>Wenst u verder te kiezen of uw bestelling af te ronden?</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Achternaam</value>
+  </data>
+  <data name="LastNameIsRequired" xml:space="preserve">
+    <value>Achternaam is verplicht!</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MoreShoppingOrNot" xml:space="preserve">
+    <value>Wenst u een nieuwe bestelling te plaatsen in onze </value>
+  </data>
   <data name="NewOrder" xml:space="preserve">
     <value>Nieuwe Bestelling</value>
   </data>
   <data name="Orders" xml:space="preserve">
     <value>Bestellingen</value>
+  </data>
+  <data name="OrdersTotal" xml:space="preserve">
+    <value>Totaal Bestellingen</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Pagina</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Paswoord</value>
@@ -162,8 +243,20 @@
   <data name="Phone" xml:space="preserve">
     <value>Telefoon</value>
   </data>
+  <data name="PhoneIsRequired" xml:space="preserve">
+    <value>Telefoonnr. is verplicht!</value>
+  </data>
   <data name="Picture" xml:space="preserve">
     <value>Afbeelding</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="PostalCodeIsRequired" xml:space="preserve">
+    <value>Postcode is verplicht!</value>
+  </data>
+  <data name="PostCode" xml:space="preserve">
+    <value>PostCode</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Item Prijs €</value>
@@ -174,13 +267,49 @@
   <data name="Register" xml:space="preserve">
     <value>Registreer</value>
   </data>
+  <data name="RegisterNewUser" xml:space="preserve">
+    <value>Registreer als nieuwe gebruiker?</value>
+  </data>
+  <data name="RegisterSucces" xml:space="preserve">
+    <value>U bent succesvol geregistreerd.</value>
+  </data>
+  <data name="RememberData" xml:space="preserve">
+    <value>Onthoud mijn gegevens</value>
+  </data>
+  <data name="ReviewCart" xml:space="preserve">
+    <value>Uw reservatie:</value>
+  </data>
+  <data name="SafeInfo" xml:space="preserve">
+    <value>Mijn gegevens onthouden</value>
+  </data>
   <data name="Search" xml:space="preserve">
     <value>Zoek</value>
+  </data>
+  <data name="ShippingInformation" xml:space="preserve">
+    <value>Verzendingsinformatie</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Stad</value>
   </data>
   <data name="StateIsRequired" xml:space="preserve">
     <value>Provincie is verplicht!</value>
   </data>
-  <data name="EmailIsVerplicht" xml:space="preserve">
-    <value>Email is verplicht!</value>
+  <data name="SubmitOrder" xml:space="preserve">
+    <value>Bevestig bestelling</value>
+  </data>
+  <data name="ThankForTheOrder" xml:space="preserve">
+    <value>Bedankt voor uw bestelling. Uw bestellingnr is </value>
+  </data>
+  <data name="UseYourAccountToLogIn" xml:space="preserve">
+    <value>Gebruik uw account gegevens voor in te loggen...</value>
+  </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Toevoegen</value>
+  </data>
+  <data name="MenuKaart" xml:space="preserve">
+    <value>Menukaart</value>
+  </data>
+  <data name="Shop" xml:space="preserve">
+    <value>Categorieën</value>
   </data>
 </root>
